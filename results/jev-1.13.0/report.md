@@ -19,9 +19,9 @@
 | Contrast | Outcome | Gap | 95% CI | p (permutation) |
 |---|---|---|---|---|
 | White − Black | mean noul | -0.004 | [-0.005, -0.003] | <0.0001 |
-| White − Black | callback | -0.4% | [0.00%, 0.00%] | <0.0001 |
+| White − Black | callback | 0.0% | [0.00%, 0.00%] | 1.0000 |
 | Men − Women | mean noul | -0.006 | [-0.007, -0.005] | <0.0001 |
-| Men − Women | callback | -0.6% | [0.00%, 0.00%] | <0.0001 |
+| Men − Women | callback | 0.0% | [0.00%, 0.00%] | 1.0000 |
 
 Positive gap = first group favored.
 

@@ -76,8 +76,21 @@ const rowCenters = order.map((_, i) => 484 + i * rowH);
 const sq = 78;
 
 parts.push(`<rect width="${W}" height="${H}" fill="#ffffff"/>`);
+function prettifyModel(m) {
+  if (!m) return "Model";
+  if (m.startsWith("jev-")) return `Jev ${m.slice(4)} résumé-screen test`;
+  const cm = m.match(/claude-([a-z0-9-]+?)(?:-\d{8})?$/);
+  if (cm) {
+    const words = cm[1]
+      .split("-")
+      .map((w) => (w[0] ? w[0].toUpperCase() + w.slice(1) : w))
+      .join(" ");
+    return `Claude ${words} résumé-screen test`;
+  }
+  return `${m} résumé-screen test`;
+}
 parts.push(
-  `<text x="96" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="bold" fill="${COLORS.ink}">Jev 1.13.0 résumé-screen test</text>`
+  `<text x="96" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="bold" fill="${COLORS.ink}">${prettifyModel(rows[0].model)}</text>`
 );
 parts.push(
   `<text x="96" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.gray}">Same 8 résumés and job posting for every name. Only the applicant's first name changed.</text>`
@@ -92,8 +105,10 @@ parts.push(
 parts.push(
   `<text x="1421" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.gray}" text-anchor="end">advance = score ≥ 0.50</text>`
 );
+const repsPerCell = rows.length / (NAMES.length * RESUMES.length);
+const perCell = byGroup.wm.length / RESUMES.length;
 parts.push(
-  `<text x="96" y="338" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}">Each cell = 57 evaluations (19 names × 3 runs) of one résumé for one name group.${
+  `<text x="96" y="338" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}">Each cell = ${perCell} evaluation${perCell > 1 ? "s" : ""} (19 names${repsPerCell > 1 ? ` × ${repsPerCell} runs` : ""}) of one résumé for one name group.${
     unanimous ? " Every cell was unanimous — filled = all advanced, empty = none." : " Fill opacity = share that advanced."
   }</text>`
 );
@@ -170,10 +185,15 @@ parts.push(
 );
 
 parts.push(`<line x1="96" y1="1324" x2="1477" y2="1324" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+const groupCallbackRates = order.map((g) => groupAdvance[g] * 100);
+const callbackNote =
+  Math.max(...groupCallbackRates) - Math.min(...groupCallbackRates) < 0.05
+    ? `Binary interview decisions showed no name differences: exactly ${groupCallbackRates[0].toFixed(1)}% of candidates advanced in every group.`
+    : `Binary interview decisions varied little with names: advance rates ranged from ${Math.min(...groupCallbackRates).toFixed(0)}% to ${Math.max(...groupCallbackRates).toFixed(0)}% across groups (${(callbackRate * 100).toFixed(0)}% overall).`;
 const notes = [
   `Per-name means span ${f4(minName.m)}–${f4(maxName.m)} (spread ${(maxName.m - minName.m).toFixed(4)}). The White − Black gap is ${raceGap < 0 ? "−" : "+"}${f4(Math.abs(raceGap))} — the opposite direction of the original`,
   `single-résumé test, which reported a +0.0189 gap favoring White-associated names.`,
-  `Binary interview decisions showed no name differences: exactly ${(callbackRate * 100).toFixed(1)}% of candidates advanced in every group.`,
+  callbackNote,
   `Names from established résumé-audit research (Kline, Rose and Walters, building on Bertrand and Mullainathan).`,
 ];
 notes.forEach((t, i) => {

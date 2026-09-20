@@ -60,6 +60,12 @@ The runner is resumable: completed eval IDs in `results/<model>/evals.jsonl` are
 skipped. When `analyze` is run without an argument it auto-discovers the single
 `results/*/evals.jsonl`; pass a path explicitly once multiple models have results.
 
+Other providers: `node run.js --provider openrouter --model anthropic/claude-opus-5`
+reads `OPENROUTER_API_KEY`, resolves the model and its pricing from OpenRouter's
+catalog, and asks the model for a JSON `{advance, probability}` judgment per call —
+same resumes, names, and posting as the Jev run. Results land in
+`results/anthropic__claude-opus-5/`; `analyze.js` and `graphic.js` work unchanged.
+
 ## Adding a model
 
 `scenario.js` isolates the model-specific surface: `MODEL`, the job posting, and

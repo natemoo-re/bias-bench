@@ -136,7 +136,6 @@ const raceMeanPerm = permGap(
     [cellByName("wm"), cellByName("bm")],
     [cellByName("wf"), cellByName("bf")],
   ],
-  true,
   "mean"
 );
 const raceRatePerm = permGap(
@@ -144,7 +143,6 @@ const raceRatePerm = permGap(
     [cellByName("wm"), cellByName("bm")],
     [cellByName("wf"), cellByName("bf")],
   ],
-  true,
   "rate"
 );
 const genderMeanPerm = permGap(
@@ -152,7 +150,6 @@ const genderMeanPerm = permGap(
     [cellByName("wm"), cellByName("wf")],
     [cellByName("bm"), cellByName("bf")],
   ],
-  true,
   "mean"
 );
 const genderRatePerm = permGap(
@@ -160,7 +157,6 @@ const genderRatePerm = permGap(
     [cellByName("wm"), cellByName("wf")],
     [cellByName("bm"), cellByName("bf")],
   ],
-  true,
   "rate"
 );
 
@@ -194,6 +190,7 @@ for (const t of [0.5, 0.7, 0.9]) {
   };
 }
 
+const repsPerCell = rows.length / (NAMES.length * RESUMES.length);
 const cellMap = new Map();
 for (const r of rows) {
   const k = `${r.name}|${r.resume_id}`;
@@ -209,7 +206,7 @@ for (const vals of cellMap.values()) {
 const stats = {
   model: rows[0].model,
   n_evals: rows.length,
-  design: `${NAMES.length} names x ${RESUMES.length} resumes x 3 reps`,
+  design: `${NAMES.length} names x ${RESUMES.length} resumes x ${repsPerCell} rep${repsPerCell > 1 ? "s" : ""}`,
   groups: groupSummary,
   gaps: {
     race_mean_noul: { obs: raceMeanPerm.obs, p: raceMeanPerm.p, ci: bootstrapRaceGap("mean") },
@@ -219,8 +216,8 @@ const stats = {
   },
   thresholds,
   repeatability: {
-    mean_rep_sd: mean(repSds),
-    share_identical_cells: identicalCells / cellMap.size,
+    mean_rep_sd: repsPerCell > 1 ? mean(repSds) : null,
+    share_identical_cells: repsPerCell > 1 ? identicalCells / cellMap.size : null,
   },
 };
 
@@ -296,11 +293,13 @@ for (let i = 0; i < 38; i++) {
   md += `| ${a.name} | ${a.group} | ${fmt(a.mean)} | ${b.name} | ${b.group} | ${fmt(b.mean)} |\n`;
 }
 
-md += `
+md += repsPerCell > 1
+  ? `
 ## Repeatability
 
-Mean within-cell SD of noul across the 3 reps: **${fmt(stats.repeatability.mean_rep_sd, 4)}** · (name, resume) cells identical across reps: **${fmtPct(stats.repeatability.share_identical_cells)}**
-`;
+Mean within-cell SD of noul across the ${repsPerCell} reps: **${fmt(stats.repeatability.mean_rep_sd, 4)}** · (name, resume) cells identical across reps: **${fmtPct(stats.repeatability.share_identical_cells)}**
+`
+  : "";
 
 writeFileSync(join(dirname(file), "report.md"), md);
 console.log(md);
