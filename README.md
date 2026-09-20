@@ -6,7 +6,7 @@ model-agnostic; results live in per-model directories under `results/`.
 
 ## What was wrong with the original
 
-The original benchmark (76 `noul` questions in one request) measured whether changing a
+The [original benchmark](https://bsky.app/profile/matthodges.bsky.social/post/3mvv7x6ilgk2s) (76 `noul` questions in one request) measured whether changing a
 first name moved a probability for one generic, abstracted resume
 ("Highly selective U.S. university", "middle-market investment bank"). Problems:
 
