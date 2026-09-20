@@ -6,6 +6,7 @@
   "scripts": {
     "pilot": "node run.js --pilot",
     "run": "node run.js",
-    "analyze": "node analyze.js"
+    "analyze": "node analyze.js",
+    "graphic": "node graphic.js && rsvg-convert -w 1541 results/jev-1.13.0/graphic.svg -o results/jev-1.13.0/graphic.png"
   }
 }

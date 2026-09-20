@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1541" height="2050" viewBox="0 0 1541 2050">
+<rect width="1541" height="2050" fill="#ffffff"/>
+<text x="96" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="bold" fill="#17171c">Jev 1.13.0 résumé-screen test</text>
+<text x="96" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">Same 8 résumés and job posting for every name. Only the applicant's first name changed.</text>
+<text x="96" y="236" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">76 names, 19 in each race × sex group. Each dot is one name's mean over 24 independent judgments.</text>
+<rect x="984.6666666665266" y="312" width="492.33333333347343" height="1080" fill="#eef1f7"/>
+<text x="1465" y="296" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="end">Above the 76-name average</text>
+<line x1="413" y1="312" x2="413" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="413" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.355</text>
+<line x1="625.8" y1="312" x2="625.8" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="625.8" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.360</text>
+<line x1="838.6" y1="312" x2="838.6" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="838.6" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.365</text>
+<line x1="1051.4" y1="312" x2="1051.4" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="1051.4" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.370</text>
+<line x1="1264.2" y1="312" x2="1264.2" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="1264.2" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.375</text>
+<line x1="1477" y1="312" x2="1477" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
+<text x="1477" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.380</text>
+<text x="945" y="1504" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">Résumé-screen score</text>
+<line x1="413" y1="312" x2="1477" y2="312" stroke="#ccd2da" stroke-width="1.5"/>
+<line x1="413" y1="582" x2="1477" y2="582" stroke="#ccd2da" stroke-width="1.5"/>
+<line x1="413" y1="852" x2="1477" y2="852" stroke="#ccd2da" stroke-width="1.5"/>
+<line x1="413" y1="1122" x2="1477" y2="1122" stroke="#ccd2da" stroke-width="1.5"/>
+<line x1="413" y1="1392" x2="1477" y2="1392" stroke="#ccd2da" stroke-width="1.5"/>
+<line x1="413" y1="312" x2="413" y2="1392" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="421" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">White-associated</text>
+<text x="96" y="457" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">men</text>
+<text x="96" y="495" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">n = 19</text>
+<circle cx="583.24" cy="447" r="11" fill="#2159a5"/>
+<circle cx="881.1600000000001" cy="417" r="11" fill="#2159a5"/>
+<circle cx="881.1600000000001" cy="447" r="11" fill="#2159a5"/>
+<circle cx="881.1600000000001" cy="477" r="11" fill="#2159a5"/>
+<circle cx="710.9200000000001" cy="402" r="11" fill="#2159a5"/>
+<circle cx="710.9200000000001" cy="432" r="11" fill="#2159a5"/>
+<circle cx="710.9200000000001" cy="462" r="11" fill="#2159a5"/>
+<circle cx="710.9200000000001" cy="492" r="11" fill="#2159a5"/>
+<circle cx="753.48" cy="432" r="11" fill="#2159a5"/>
+<circle cx="753.48" cy="462" r="11" fill="#2159a5"/>
+<circle cx="625.8" cy="432" r="11" fill="#2159a5"/>
+<circle cx="625.8" cy="462" r="11" fill="#2159a5"/>
+<circle cx="838.6" cy="417" r="11" fill="#2159a5"/>
+<circle cx="838.6" cy="447" r="11" fill="#2159a5"/>
+<circle cx="838.6" cy="477" r="11" fill="#2159a5"/>
+<circle cx="796.04" cy="432" r="11" fill="#2159a5"/>
+<circle cx="796.04" cy="462" r="11" fill="#2159a5"/>
+<circle cx="668.36" cy="432" r="11" fill="#2159a5"/>
+<circle cx="668.36" cy="462" r="11" fill="#2159a5"/>
+<path d="M 746.199999999964 572 L 737.199999999964 589 L 755.199999999964 589 Z" fill="#2159a5"/>
+<text x="764.199999999964" y="612" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="bold" fill="#2159a5">mean 0.3628</text>
+<text x="1465" y="364" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#2159a5" text-anchor="end">0 of 19</text>
+<text x="96" y="691" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">White-associated</text>
+<text x="96" y="727" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">women</text>
+<text x="96" y="765" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">n = 19</text>
+<circle cx="1093.96" cy="672" r="11" fill="#8fb6e3"/>
+<circle cx="1093.96" cy="702" r="11" fill="#8fb6e3"/>
+<circle cx="1093.96" cy="732" r="11" fill="#8fb6e3"/>
+<circle cx="1093.96" cy="762" r="11" fill="#8fb6e3"/>
+<circle cx="966.28" cy="687" r="11" fill="#8fb6e3"/>
+<circle cx="966.28" cy="717" r="11" fill="#8fb6e3"/>
+<circle cx="966.28" cy="747" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="642" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="672" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="702" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="732" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="762" r="11" fill="#8fb6e3"/>
+<circle cx="1051.4" cy="792" r="11" fill="#8fb6e3"/>
+<circle cx="1008.84" cy="672" r="11" fill="#8fb6e3"/>
+<circle cx="1008.84" cy="702" r="11" fill="#8fb6e3"/>
+<circle cx="1008.84" cy="732" r="11" fill="#8fb6e3"/>
+<circle cx="1008.84" cy="762" r="11" fill="#8fb6e3"/>
+<circle cx="1136.52" cy="717" r="11" fill="#8fb6e3"/>
+<circle cx="1179.08" cy="717" r="11" fill="#8fb6e3"/>
+<path d="M 1050.4666666666126 842 L 1041.4666666666126 859 L 1059.4666666666126 859 Z" fill="#8fb6e3"/>
+<text x="1068.4666666666126" y="882" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="bold" fill="#8fb6e3">mean 0.3700</text>
+<text x="1465" y="634" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#8fb6e3" text-anchor="end">16 of 19</text>
+<text x="96" y="961" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">Black-associated</text>
+<text x="96" y="997" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">men</text>
+<text x="96" y="1035" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">n = 19</text>
+<circle cx="838.6" cy="957" r="11" fill="#bf571d"/>
+<circle cx="838.6" cy="987" r="11" fill="#bf571d"/>
+<circle cx="838.6" cy="1017" r="11" fill="#bf571d"/>
+<circle cx="923.72" cy="942" r="11" fill="#bf571d"/>
+<circle cx="923.72" cy="972" r="11" fill="#bf571d"/>
+<circle cx="923.72" cy="1002" r="11" fill="#bf571d"/>
+<circle cx="923.72" cy="1032" r="11" fill="#bf571d"/>
+<circle cx="966.28" cy="942" r="11" fill="#bf571d"/>
+<circle cx="966.28" cy="972" r="11" fill="#bf571d"/>
+<circle cx="966.28" cy="1002" r="11" fill="#bf571d"/>
+<circle cx="966.28" cy="1032" r="11" fill="#bf571d"/>
+<circle cx="1008.84" cy="957" r="11" fill="#bf571d"/>
+<circle cx="1008.84" cy="987" r="11" fill="#bf571d"/>
+<circle cx="1008.84" cy="1017" r="11" fill="#bf571d"/>
+<circle cx="1051.4" cy="972" r="11" fill="#bf571d"/>
+<circle cx="1051.4" cy="1002" r="11" fill="#bf571d"/>
+<circle cx="881.1600000000001" cy="972" r="11" fill="#bf571d"/>
+<circle cx="881.1600000000001" cy="1002" r="11" fill="#bf571d"/>
+<circle cx="1136.52" cy="987" r="11" fill="#bf571d"/>
+<path d="M 948.7333333332799 1112 L 939.7333333332799 1129 L 957.7333333332799 1129 Z" fill="#bf571d"/>
+<text x="966.7333333332799" y="1152" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="bold" fill="#bf571d">mean 0.3676</text>
+<text x="1465" y="904" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#bf571d" text-anchor="end">6 of 19</text>
+<text x="96" y="1231" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">Black-associated</text>
+<text x="96" y="1267" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c">women</text>
+<text x="96" y="1305" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">n = 19</text>
+<circle cx="1093.96" cy="1242" r="11" fill="#f5b97b"/>
+<circle cx="1093.96" cy="1272" r="11" fill="#f5b97b"/>
+<circle cx="1051.4" cy="1242" r="11" fill="#f5b97b"/>
+<circle cx="1051.4" cy="1272" r="11" fill="#f5b97b"/>
+<circle cx="1306.76" cy="1197" r="11" fill="#f5b97b"/>
+<circle cx="1306.76" cy="1227" r="11" fill="#f5b97b"/>
+<circle cx="1306.76" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="1306.76" cy="1287" r="11" fill="#f5b97b"/>
+<circle cx="1306.76" cy="1317" r="11" fill="#f5b97b"/>
+<circle cx="1221.6399999999999" cy="1227" r="11" fill="#f5b97b"/>
+<circle cx="1221.6399999999999" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="1221.6399999999999" cy="1287" r="11" fill="#f5b97b"/>
+<circle cx="838.6" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="1264.2" cy="1242" r="11" fill="#f5b97b"/>
+<circle cx="1264.2" cy="1272" r="11" fill="#f5b97b"/>
+<circle cx="1349.3200000000002" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="1391.88" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="1179.08" cy="1257" r="11" fill="#f5b97b"/>
+<circle cx="966.28" cy="1257" r="11" fill="#f5b97b"/>
+<path d="M 1193.2666666666414 1382 L 1184.2666666666414 1399 L 1202.2666666666414 1399 Z" fill="#f5b97b"/>
+<text x="1211.2666666666414" y="1422" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="bold" fill="#f5b97b">mean 0.3733</text>
+<text x="1465" y="1174" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f5b97b" text-anchor="end">17 of 19</text>
+<line x1="96" y1="1536" x2="1477" y2="1536" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="1608" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="#17171c">Results</text>
+<text x="690" y="1582" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672" text-anchor="end">mean score</text>
+<circle cx="106" cy="1653" r="10" fill="#2159a5"/>
+<circle cx="130" cy="1653" r="10" fill="#8fb6e3"/>
+<text x="154" y="1662" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">White-associated names (n = 38)</text>
+<text x="690" y="1662" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3664</text>
+<circle cx="106" cy="1713" r="10" fill="#bf571d"/>
+<circle cx="130" cy="1713" r="10" fill="#f5b97b"/>
+<text x="154" y="1722" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Black-associated names (n = 38)</text>
+<text x="690" y="1722" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3705</text>
+<line x1="96" y1="1758" x2="690" y2="1758" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Gap</text>
+<text x="690" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">−0.0041</text>
+<line x1="780" y1="1576" x2="780" y2="1846" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="820" y="1668" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#2159a5">16 of 38</tspan> White-associated names</text>
+<text x="820" y="1712" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c">scored above the 76-name average.</text>
+<text x="820" y="1796" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#bf571d">23 of 38</tspan> Black-associated names did.</text>
+<line x1="96" y1="1876" x2="1477" y2="1876" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="1918" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Per-name means span 0.3588–0.3775 (spread 0.0188). The White − Black gap is −0.0041 — the opposite direction of the original</text>
+<text x="96" y="1952" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">single-résumé test, which reported a +0.0189 gap favoring White-associated names.</text>
+<text x="96" y="1986" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Binary interview decisions showed no name differences: exactly 25.0% of candidates advanced in every group.</text>
+<text x="96" y="2020" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Names from established résumé-audit research (Kline, Rose and Walters, building on Bertrand and Mullainathan).</text>
+</svg>
