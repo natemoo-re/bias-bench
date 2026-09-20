@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1541" height="1154" viewBox="0 0 1541 1154">
+<rect width="1541" height="1154" fill="#ffffff"/>
+<text x="96" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#17171c" font-weight="bold">Callback gaps across five screeners</text>
+<text x="96" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">Same 8 résumés, same job posting, 76 names — only the applicant's first name changed.</text>
+<text x="96" y="236" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">Gap = Female − Male interview-advance rate, in percentage points.</text>
+<text x="96" y="276" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">Whiskers: 95% cluster-bootstrap CIs over names (10k draws). Right of zero = Black-associated or female names favored.</text>
+<text x="96" y="362" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#17171c" font-weight="bold">Male → Female callback-rate gap</text>
+<text x="1477" y="362" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672" text-anchor="end">percentage points</text>
+<line x1="588.9655172413793" y1="440" x2="588.9655172413793" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="588.9655172413793" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">-4</text>
+<line x1="704.8275862068965" y1="440" x2="704.8275862068965" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="704.8275862068965" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">-2</text>
+<line x1="820.6896551724137" y1="440" x2="820.6896551724137" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="820.6896551724137" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0</text>
+<line x1="936.551724137931" y1="440" x2="936.551724137931" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="936.551724137931" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">2</text>
+<line x1="1052.4137931034484" y1="440" x2="1052.4137931034484" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1052.4137931034484" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">4</text>
+<line x1="1168.2758620689656" y1="440" x2="1168.2758620689656" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1168.2758620689656" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">6</text>
+<line x1="1284.1379310344828" y1="440" x2="1284.1379310344828" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1284.1379310344828" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">8</text>
+<line x1="1400" y1="440" x2="1400" y2="448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1400" y="474" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">10</text>
+<line x1="560" y1="440" x2="1400" y2="440" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="560" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">← favors male</text>
+<text x="1400" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="end">favors female →</text>
+<line x1="820.6896551724137" y1="414" x2="820.6896551724137" y2="932" stroke="#17171c" stroke-width="2"/>
+<circle cx="820.6896551724137" cy="510" r="9" fill="#17171c" stroke="none" stroke-width="2.5"/>
+<text x="96" y="508" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold">Jev 1.13.0</text>
+<text x="96" y="536" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">1824 evals</text>
+<text x="1477" y="519" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold" text-anchor="end">+0.0pp</text>
+<line x1="706.3520871143376" y1="606" x2="820.6896551724137" y2="606" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="706.3520871143376" y1="600" x2="706.3520871143376" y2="612" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="820.6896551724137" y1="600" x2="820.6896551724137" y2="612" stroke="#5f6672" stroke-width="1.5"/>
+<circle cx="763.5208711433756" cy="606" r="9" fill="#17171c" stroke="none" stroke-width="2.5"/>
+<text x="96" y="604" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold">Claude Opus 5</text>
+<text x="96" y="632" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">608 evals</text>
+<text x="1477" y="615" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold" text-anchor="end">−1.0pp</text>
+<line x1="706.3520871143376" y1="702" x2="1049.3647912885663" y2="702" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="706.3520871143376" y1="696" x2="706.3520871143376" y2="708" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="1049.3647912885663" y1="696" x2="1049.3647912885663" y2="708" stroke="#5f6672" stroke-width="1.5"/>
+<circle cx="877.8584392014519" cy="702" r="9" fill="#17171c" stroke="none" stroke-width="2.5"/>
+<text x="96" y="700" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold">Claude Fable 5.1</text>
+<text x="96" y="728" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">608 evals</text>
+<text x="1477" y="711" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold" text-anchor="end">+1.0pp</text>
+<line x1="572.9582577132484" y1="798" x2="1125.589836660617" y2="798" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="572.9582577132484" y1="792" x2="572.9582577132484" y2="804" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="1125.589836660617" y1="792" x2="1125.589836660617" y2="804" stroke="#5f6672" stroke-width="1.5"/>
+<circle cx="839.7459165154266" cy="798" r="9" fill="#17171c" stroke="none" stroke-width="2.5"/>
+<text x="96" y="796" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold">GPT-5.6 Sol</text>
+<text x="96" y="824" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">608 evals</text>
+<text x="1477" y="807" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold" text-anchor="end">+0.3pp</text>
+<line x1="725.4083484573501" y1="894" x2="992.1960072595282" y2="894" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="725.4083484573501" y1="888" x2="725.4083484573501" y2="900" stroke="#5f6672" stroke-width="1.5"/>
+<line x1="992.1960072595282" y1="888" x2="992.1960072595282" y2="900" stroke="#5f6672" stroke-width="1.5"/>
+<circle cx="858.8021778584393" cy="894" r="9" fill="#17171c" stroke="none" stroke-width="2.5"/>
+<text x="96" y="892" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold">GPT-6 Astra</text>
+<text x="96" y="920" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672">608 evals</text>
+<text x="1477" y="903" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" font-weight="bold" text-anchor="end">+0.7pp</text>
+<line x1="96" y1="1020" x2="1477" y2="1020" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="1066" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Gender callback gaps hug zero for every model — no consistent male or female advantage survives at the binary decision.</text>
+<text x="96" y="1100" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Model estimates: this benchmark's cluster-bootstrap CIs over names (10k draws).</text>
+</svg>
