@@ -1,0 +1,11 @@
+{
+  "name": "bias-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pilot": "node run.js --pilot",
+    "run": "node run.js",
+    "analyze": "node analyze.js"
+  }
+}
