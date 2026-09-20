@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { NAMES, GROUPS } from "./names.js";
+import { RESUMES } from "./resumes.js";
 
 const modelDir = process.argv[2] ?? "results/jev-1.13.0";
 const rows = readFileSync(`${modelDir}/evals.jsonl`, "utf8")
@@ -50,7 +51,7 @@ const COLORS = {
 };
 
 const W = 1541;
-const H = 2050;
+const H = 2780;
 const plotX = 413;
 const plotW = 1064;
 const plotTop = 312;
@@ -67,6 +68,13 @@ const xScale = (v) =>
     : v <= X_MAX
       ? xB[0] + ((v - X_MIN) / (X_MAX - X_MIN)) * (xB[1] - xB[0])
       : xC[0] + ((v - X_MAX) / (1 - X_MAX)) * (xC[1] - xC[0]);
+
+const LABEL_LINES = {
+  wm: ["White-associated", "men"],
+  wf: ["White-associated", "women"],
+  bm: ["Black-associated", "men"],
+  bf: ["Black-associated", "women"],
+};
 
 const order = ["wm", "wf", "bm", "bf"];
 const parts = [];
@@ -120,6 +128,70 @@ parts.push(
   `<text x="${plotX + plotW / 2}" y="${plotBottom + 112}" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.ink}" text-anchor="middle">Résumé-screen score</text>`
 );
 
+const decisionCells = {};
+for (const g of order) {
+  for (const res of RESUMES) {
+    const cellRows = rows.filter((r) => r.name_group === g && r.resume_id === res.id);
+    decisionCells[`${g}|${res.id}`] = mean(cellRows.map((r) => (r.noul >= 0.5 ? 1 : 0)));
+  }
+}
+const unanimous = Object.values(decisionCells).every((v) => v === 0 || v === 1);
+const groupAdvance = {};
+const groupAdvancedCount = {};
+for (const g of order) {
+  groupAdvance[g] = mean(byGroup[g].map((noul) => (noul >= 0.5 ? 1 : 0)));
+  groupAdvancedCount[g] = Math.round(groupAdvance[g] * byGroup[g].length);
+}
+const resumeMeans = RESUMES.map((res) => mean(rows.filter((r) => r.resume_id === res.id).map((r) => r.noul)));
+
+const dx0 = 430;
+const colPitch = 96;
+const colCenters = RESUMES.map((_, j) => dx0 + colPitch * (j + 0.5));
+const rowCenters = [1789, 1907, 2025, 2143];
+const sq = 70;
+
+parts.push(`<line x1="96" y1="1552" x2="1477" y2="1552" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+parts.push(
+  `<text x="96" y="1604" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="${COLORS.ink}">Interview decisions</text>`
+);
+parts.push(
+  `<text x="1421" y="1604" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.gray}" text-anchor="end">advance = score ≥ 0.50</text>`
+);
+parts.push(
+  `<text x="96" y="1642" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}">Each cell = 57 evaluations (19 names × 3 runs) of one résumé for one name group.${
+    unanimous ? " Every cell was unanimous — filled = all advanced, empty = none." : " Fill opacity = share that advanced."
+  }</text>`
+);
+RESUMES.forEach((res, j) => {
+  parts.push(
+    `<text x="${colCenters[j]}" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="${COLORS.ink}" text-anchor="middle">${res.id}</text>`
+  );
+  parts.push(
+    `<text x="${colCenters[j]}" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="${COLORS.gray}" text-anchor="middle">${resumeMeans[j].toFixed(3)}</text>`
+  );
+});
+order.forEach((g, i) => {
+  const cy = rowCenters[i];
+  parts.push(
+    `<text x="96" y="${cy - 16}" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="${COLORS.ink}">${LABEL_LINES[g][0]}</text>`
+  );
+  parts.push(
+    `<text x="96" y="${cy + 16}" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="${COLORS.ink}">${LABEL_LINES[g][1]}</text>`
+  );
+  RESUMES.forEach((res, j) => {
+    const rate = decisionCells[`${g}|${res.id}`];
+    parts.push(
+      `<rect x="${colCenters[j] - sq / 2}" y="${cy - sq / 2}" width="${sq}" height="${sq}" rx="10" fill="${COLORS[g]}" fill-opacity="${rate}" stroke="${COLORS.rule}" stroke-width="1.5"/>`
+    );
+  });
+  parts.push(
+    `<text x="1421" y="${cy - 6}" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS[g]}" text-anchor="end">${(groupAdvance[g] * 100).toFixed(1)}%</text>`
+  );
+  parts.push(
+    `<text x="1421" y="${cy + 24}" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="${COLORS.gray}" text-anchor="end">${groupAdvancedCount[g]} of ${byGroup[g].length} advanced</text>`
+  );
+});
+
 for (let i = 0; i <= 4; i++) {
   const y = plotTop + i * rowH;
   parts.push(`<line x1="${plotX}" y1="${y}" x2="${xC[1]}" y2="${y}" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
@@ -131,13 +203,6 @@ const breakAt = (x0) => {
 breakAt(450);
 breakAt(1428);
 parts.push(`<line x1="${plotX}" y1="${plotTop}" x2="${plotX}" y2="${plotBottom}" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
-
-const LABEL_LINES = {
-  wm: ["White-associated", "men"],
-  wf: ["White-associated", "women"],
-  bm: ["Black-associated", "men"],
-  bf: ["Black-associated", "women"],
-};
 
 order.forEach((g, i) => {
   const rowTop = plotTop + i * rowH;
@@ -182,17 +247,17 @@ order.forEach((g, i) => {
   );
 });
 
-parts.push(`<line x1="96" y1="1536" x2="1477" y2="1536" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+parts.push(`<line x1="96" y1="2226" x2="1477" y2="2226" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
 parts.push(
-  `<text x="96" y="1608" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="${COLORS.ink}">Results</text>`
+  `<text x="96" y="2298" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="${COLORS.ink}">Results</text>`
 );
 parts.push(
-  `<text x="690" y="1582" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}" text-anchor="end">mean score</text>`
+  `<text x="690" y="2272" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}" text-anchor="end">mean score</text>`
 );
 
 const legendRows = [
-  { dots: [COLORS.wm, COLORS.wf], label: "White-associated names (n = 38)", value: white, y: 1662 },
-  { dots: [COLORS.bm, COLORS.bf], label: "Black-associated names (n = 38)", value: black, y: 1722 },
+  { dots: [COLORS.wm, COLORS.wf], label: "White-associated names (n = 38)", value: white, y: 2352 },
+  { dots: [COLORS.bm, COLORS.bf], label: "Black-associated names (n = 38)", value: black, y: 2412 },
 ];
 for (const r of legendRows) {
   parts.push(`<circle cx="106" cy="${r.y - 9}" r="10" fill="${r.dots[0]}"/>`);
@@ -204,27 +269,27 @@ for (const r of legendRows) {
     `<text x="690" y="${r.y}" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS.ink}" text-anchor="end">${f4(r.value)}</text>`
   );
 }
-parts.push(`<line x1="96" y1="1758" x2="690" y2="1758" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+parts.push(`<line x1="96" y1="2448" x2="690" y2="2448" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
 parts.push(
-  `<text x="96" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.ink}">Gap</text>`
+  `<text x="96" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.ink}">Gap</text>`
 );
 parts.push(
-  `<text x="690" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS.ink}" text-anchor="end">−${f4(Math.abs(raceGap))}</text>`
-);
-
-parts.push(`<line x1="780" y1="1576" x2="780" y2="1846" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
-
-parts.push(
-  `<text x="820" y="1668" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}"><tspan font-weight="bold" fill="${COLORS.wm}">${abovePooled.white} of 38</tspan> White-associated names</text>`
-);
-parts.push(
-  `<text x="820" y="1712" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}">scored above the 76-name average.</text>`
-);
-parts.push(
-  `<text x="820" y="1796" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}"><tspan font-weight="bold" fill="${COLORS.bm}">${abovePooled.black} of 38</tspan> Black-associated names did.</text>`
+  `<text x="690" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS.ink}" text-anchor="end">−${f4(Math.abs(raceGap))}</text>`
 );
 
-parts.push(`<line x1="96" y1="1876" x2="1477" y2="1876" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+parts.push(`<line x1="780" y1="2278" x2="780" y2="2548" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+
+parts.push(
+  `<text x="820" y="2376" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}"><tspan font-weight="bold" fill="${COLORS.wm}">${abovePooled.white} of 38</tspan> White-associated names</text>`
+);
+parts.push(
+  `<text x="820" y="2420" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}">scored above the 76-name average.</text>`
+);
+parts.push(
+  `<text x="820" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="${COLORS.ink}"><tspan font-weight="bold" fill="${COLORS.bm}">${abovePooled.black} of 38</tspan> Black-associated names did.</text>`
+);
+
+parts.push(`<line x1="96" y1="2580" x2="1477" y2="2580" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
 const notes = [
   `Per-name means span ${f4(minName.m)}–${f4(maxName.m)} (spread ${(maxName.m - minName.m).toFixed(4)}). The White − Black gap is ${raceGap < 0 ? "−" : "+"}${f4(Math.abs(raceGap))} — the opposite direction of the original`,
   `single-résumé test, which reported a +0.0189 gap favoring White-associated names.`,
@@ -233,7 +298,7 @@ const notes = [
 ];
 notes.forEach((t, i) => {
   parts.push(
-    `<text x="96" y="${1918 + i * 34}" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}">${t}</text>`
+    `<text x="96" y="${2622 + i * 34}" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="${COLORS.gray}">${t}</text>`
   );
 });
 

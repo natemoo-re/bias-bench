@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1541" height="2050" viewBox="0 0 1541 2050">
-<rect width="1541" height="2050" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1541" height="2780" viewBox="0 0 1541 2780">
+<rect width="1541" height="2780" fill="#ffffff"/>
 <text x="96" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="bold" fill="#17171c">Jev 1.13.0 résumé-screen test</text>
 <text x="96" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">Same 8 résumés and job posting for every name. Only the applicant's first name changed.</text>
 <text x="96" y="236" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672">76 names, 19 in each race × sex group. Each dot is one name's mean over 24 independent judgments.</text>
@@ -24,6 +24,74 @@
 <line x1="1429" y1="312" x2="1429" y2="1392" stroke="#e6e9ee" stroke-width="1.5"/>
 <text x="1429" y="1456" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">0.380</text>
 <text x="945" y="1504" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c" text-anchor="middle">Résumé-screen score</text>
+<line x1="96" y1="1552" x2="1477" y2="1552" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="1604" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#17171c">Interview decisions</text>
+<text x="1421" y="1604" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#5f6672" text-anchor="end">advance = score ≥ 0.50</text>
+<text x="96" y="1642" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Each cell = 57 evaluations (19 names × 3 runs) of one résumé for one name group. Every cell was unanimous — filled = all advanced, empty = none.</text>
+<text x="478" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R1</text>
+<text x="478" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.790</text>
+<text x="574" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R2</text>
+<text x="574" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.416</text>
+<text x="670" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R3</text>
+<text x="670" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.636</text>
+<text x="766" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R4</text>
+<text x="766" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.415</text>
+<text x="862" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R5</text>
+<text x="862" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.195</text>
+<text x="958" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R6</text>
+<text x="958" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.167</text>
+<text x="1054" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R7</text>
+<text x="1054" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.159</text>
+<text x="1150" y="1698" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c" text-anchor="middle">R8</text>
+<text x="1150" y="1726" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="middle">0.169</text>
+<text x="96" y="1773" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">White-associated</text>
+<text x="96" y="1805" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">men</text>
+<rect x="443" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="539" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="635" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="731" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="827" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="923" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1019" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1115" y="1754" width="70" height="70" rx="10" fill="#2159a5" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1421" y="1783" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#2159a5" text-anchor="end">25.0%</text>
+<text x="1421" y="1813" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="end">114 of 456 advanced</text>
+<text x="96" y="1891" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">White-associated</text>
+<text x="96" y="1923" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">women</text>
+<rect x="443" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="539" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="635" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="731" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="827" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="923" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1019" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1115" y="1872" width="70" height="70" rx="10" fill="#8fb6e3" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1421" y="1901" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#8fb6e3" text-anchor="end">25.0%</text>
+<text x="1421" y="1931" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="end">114 of 456 advanced</text>
+<text x="96" y="2009" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">Black-associated</text>
+<text x="96" y="2041" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">men</text>
+<rect x="443" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="539" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="635" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="731" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="827" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="923" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1019" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1115" y="1990" width="70" height="70" rx="10" fill="#bf571d" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1421" y="2019" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#bf571d" text-anchor="end">25.0%</text>
+<text x="1421" y="2049" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="end">114 of 456 advanced</text>
+<text x="96" y="2127" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">Black-associated</text>
+<text x="96" y="2159" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#17171c">women</text>
+<rect x="443" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="539" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="635" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="1" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="731" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="827" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="923" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1019" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<rect x="1115" y="2108" width="70" height="70" rx="10" fill="#f5b97b" fill-opacity="0" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="1421" y="2137" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f5b97b" text-anchor="end">25.0%</text>
+<text x="1421" y="2167" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5f6672" text-anchor="end">114 of 456 advanced</text>
 <line x1="413" y1="312" x2="1477" y2="312" stroke="#ccd2da" stroke-width="1.5"/>
 <line x1="413" y1="582" x2="1477" y2="582" stroke="#ccd2da" stroke-width="1.5"/>
 <line x1="413" y1="852" x2="1477" y2="852" stroke="#ccd2da" stroke-width="1.5"/>
@@ -134,27 +202,27 @@
 <path d="M 1170.8666666666436 1382 L 1161.8666666666436 1399 L 1179.8666666666436 1399 Z" fill="#f5b97b"/>
 <text x="1188.8666666666436" y="1422" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="bold" fill="#f5b97b">mean 0.3733</text>
 <text x="1421" y="1174" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f5b97b" text-anchor="end">17 of 19</text>
-<line x1="96" y1="1536" x2="1477" y2="1536" stroke="#ccd2da" stroke-width="1.5"/>
-<text x="96" y="1608" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="#17171c">Results</text>
-<text x="690" y="1582" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672" text-anchor="end">mean score</text>
-<circle cx="106" cy="1653" r="10" fill="#2159a5"/>
-<circle cx="130" cy="1653" r="10" fill="#8fb6e3"/>
-<text x="154" y="1662" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">White-associated names (n = 38)</text>
-<text x="690" y="1662" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3664</text>
-<circle cx="106" cy="1713" r="10" fill="#bf571d"/>
-<circle cx="130" cy="1713" r="10" fill="#f5b97b"/>
-<text x="154" y="1722" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Black-associated names (n = 38)</text>
-<text x="690" y="1722" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3705</text>
-<line x1="96" y1="1758" x2="690" y2="1758" stroke="#ccd2da" stroke-width="1.5"/>
-<text x="96" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Gap</text>
-<text x="690" y="1814" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">−0.0041</text>
-<line x1="780" y1="1576" x2="780" y2="1846" stroke="#ccd2da" stroke-width="1.5"/>
-<text x="820" y="1668" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#2159a5">16 of 38</tspan> White-associated names</text>
-<text x="820" y="1712" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c">scored above the 76-name average.</text>
-<text x="820" y="1796" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#bf571d">23 of 38</tspan> Black-associated names did.</text>
-<line x1="96" y1="1876" x2="1477" y2="1876" stroke="#ccd2da" stroke-width="1.5"/>
-<text x="96" y="1918" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Per-name means span 0.3588–0.3775 (spread 0.0188). The White − Black gap is −0.0041 — the opposite direction of the original</text>
-<text x="96" y="1952" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">single-résumé test, which reported a +0.0189 gap favoring White-associated names.</text>
-<text x="96" y="1986" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Binary interview decisions showed no name differences: exactly 25.0% of candidates advanced in every group.</text>
-<text x="96" y="2020" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Names from established résumé-audit research (Kline, Rose and Walters, building on Bertrand and Mullainathan).</text>
+<line x1="96" y1="2226" x2="1477" y2="2226" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="2298" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="bold" fill="#17171c">Results</text>
+<text x="690" y="2272" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672" text-anchor="end">mean score</text>
+<circle cx="106" cy="2343" r="10" fill="#2159a5"/>
+<circle cx="130" cy="2343" r="10" fill="#8fb6e3"/>
+<text x="154" y="2352" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">White-associated names (n = 38)</text>
+<text x="690" y="2352" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3664</text>
+<circle cx="106" cy="2403" r="10" fill="#bf571d"/>
+<circle cx="130" cy="2403" r="10" fill="#f5b97b"/>
+<text x="154" y="2412" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Black-associated names (n = 38)</text>
+<text x="690" y="2412" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">0.3705</text>
+<line x1="96" y1="2448" x2="690" y2="2448" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#17171c">Gap</text>
+<text x="690" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#17171c" text-anchor="end">−0.0041</text>
+<line x1="780" y1="2278" x2="780" y2="2548" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="820" y="2376" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#2159a5">16 of 38</tspan> White-associated names</text>
+<text x="820" y="2420" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c">scored above the 76-name average.</text>
+<text x="820" y="2504" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#17171c"><tspan font-weight="bold" fill="#bf571d">23 of 38</tspan> Black-associated names did.</text>
+<line x1="96" y1="2580" x2="1477" y2="2580" stroke="#ccd2da" stroke-width="1.5"/>
+<text x="96" y="2622" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Per-name means span 0.3588–0.3775 (spread 0.0188). The White − Black gap is −0.0041 — the opposite direction of the original</text>
+<text x="96" y="2656" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">single-résumé test, which reported a +0.0189 gap favoring White-associated names.</text>
+<text x="96" y="2690" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Binary interview decisions showed no name differences: exactly 25.0% of candidates advanced in every group.</text>
+<text x="96" y="2724" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#5f6672">Names from established résumé-audit research (Kline, Rose and Walters, building on Bertrand and Mullainathan).</text>
 </svg>
