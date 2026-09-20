@@ -3,6 +3,16 @@ import { NAMES, GROUPS } from "./names.js";
 import { RESUMES } from "./resumes.js";
 import { buildRequest as buildJev, MODEL as JEV_MODEL, QUESTION_ID } from "./scenario.js";
 import { buildClaudeMessages, DEFAULT_MODEL as CLAUDE_DEFAULT_MODEL } from "./scenario-claude.js";
+import { buildGptMessages } from "./scenario-gpt.js";
+import { buildFableMessages } from "./scenario-fable.js";
+import { buildAstraMessages } from "./scenario-astra.js";
+
+function resolveChatBuilder(model) {
+  if (model.includes("fable")) return buildFableMessages;
+  if (model.includes("astra")) return buildAstraMessages;
+  if (model.startsWith("openai/")) return buildGptMessages;
+  return buildClaudeMessages;
+}
 
 const PROVIDERS = {
   jev: {
@@ -33,10 +43,10 @@ const PROVIDERS = {
       "X-Title": "bias-bench",
     }),
     build: (name, resume, model) => {
-      const { system, user } = buildClaudeMessages(name, resume);
+      const { system, user } = resolveChatBuilder(model)(name, resume);
       return {
         model,
-        max_tokens: 512,
+        max_tokens: 2048,
         temperature: 0,
         messages: [
           { role: "system", content: system },
@@ -46,15 +56,23 @@ const PROVIDERS = {
     },
     parse: (json) => {
       const text = json.choices?.[0]?.message?.content ?? "";
-      const match = text.match(/\{[\s\S]*\}/);
+      const match = text.match(/\{[\s\S]*\}/) ?? text.match(/\{[\s\S]*/);
       let probability = null;
       let advanced = null;
       if (match) {
-        try {
-          const obj = JSON.parse(match[0]);
+        const obj = (() => {
+          try {
+            return JSON.parse(match[0]);
+          } catch {}
+          try {
+            return JSON.parse(match[0] + "}");
+          } catch {}
+          return null;
+        })();
+        if (obj) {
           advanced = obj.advance === true;
           probability = typeof obj.probability === "number" ? obj.probability : null;
-        } catch {}
+        }
       }
       if (typeof probability !== "number") {
         throw new Error(`no probability in response: ${text.slice(0, 200)}`);

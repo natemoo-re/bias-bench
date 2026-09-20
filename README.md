@@ -60,11 +60,15 @@ The runner is resumable: completed eval IDs in `results/<model>/evals.jsonl` are
 skipped. When `analyze` is run without an argument it auto-discovers the single
 `results/*/evals.jsonl`; pass a path explicitly once multiple models have results.
 
-Other providers: `node run.js --provider openrouter --model anthropic/claude-opus-5`
-reads `OPENROUTER_API_KEY`, resolves the model and its pricing from OpenRouter's
-catalog, and asks the model for a JSON `{advance, probability}` judgment per call —
-same resumes, names, and posting as the Jev run. Results land in
-`results/anthropic__claude-opus-5/`; `analyze.js` and `graphic.js` work unchanged.
+Other models run through OpenRouter the same way:
+`node run.js --provider openrouter --model anthropic/claude-opus-5` or
+`node run.js --provider openrouter --model openai/gpt-5.6-sol` reads
+`OPENROUTER_API_KEY`, resolves the model and its pricing from OpenRouter's
+catalog, and asks the model for a JSON `{advance, probability}` judgment per
+call — same resumes, names, and posting as the Jev run. Results land in
+`results/<model id with / → __>/` (e.g. `results/openai__gpt-5.6-sol/`);
+`analyze.js`, `graphic.js`, and rsvg-convert work unchanged when pointed at the
+new directory.
 
 ## Adding a model
 
@@ -87,12 +91,18 @@ name lists shared so results stay comparable.
 
 ## Results
 
-See `results/jev-1.13.0/report.md`. Headline (jev-1.13.0): callback decisions are
-perfectly
-determined by resume quality (zero binary-decision name differences); mean-probability
-name gaps are ~0.4–0.6pp — statistically detectable only because the model is
-near-deterministic, opposite in sign to the human audit-study direction
-(Black-associated and female names very slightly favored), and operationally negligible.
+See `results/<model>/report.md` (with `stats.json` and `graphic.svg`/`.png` alongside).
+Headlines (White − Black, mean noul; negative = Black-associated names favored):
+
+- **jev-1.13.0** — callback decisions are perfectly determined by resume quality
+  (zero binary-decision name differences); mean-probability name gaps are ~0.4–0.6pp,
+  statistically detectable only because the model is near-deterministic, opposite in
+  sign to the human audit-study direction, and operationally negligible.
+- **anthropic/claude-opus-5** — near-deterministic; −2.7pp mean-noul gap (p ≈ 0 by
+  permutation), −1.0pp callback gap (p = 0.23). Same reverse sign as Jev.
+- **openai/gpt-5.6-sol** — the noisiest screener of the three; −1.6pp mean-noul
+  (p = 0.26), −4.3pp callback gap (p = 0.09). Gender gaps within noise. Larger
+  per-cell noise widens CIs, so magnitudes — not p-values — carry the comparison.
 
 ## Threats to validity
 
