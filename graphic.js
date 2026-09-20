@@ -10,7 +10,6 @@ const rows = readFileSync(`${modelDir}/evals.jsonl`, "utf8")
 
 const mean = (xs) => xs.reduce((a, b) => a + b, 0) / xs.length;
 const f4 = (x) => x.toFixed(4);
-const f2 = (x) => x.toFixed(2);
 
 const byName = new Map();
 const byGroup = {};
@@ -59,7 +58,15 @@ const plotBottom = 1392;
 const rowH = (plotBottom - plotTop) / 4;
 const X_MIN = 0.355;
 const X_MAX = 0.38;
-const xScale = (v) => plotX + ((v - X_MIN) / (X_MAX - X_MIN)) * plotW;
+const xA = [plotX, 451];
+const xB = [461, 1429];
+const xC = [1439, plotX + plotW];
+const xScale = (v) =>
+  v < X_MIN
+    ? xA[0] + (v / X_MIN) * (xA[1] - xA[0])
+    : v <= X_MAX
+      ? xB[0] + ((v - X_MIN) / (X_MAX - X_MIN)) * (xB[1] - xB[0])
+      : xC[0] + ((v - X_MAX) / (1 - X_MAX)) * (xC[1] - xC[0]);
 
 const order = ["wm", "wf", "bm", "bf"];
 const parts = [];
@@ -74,13 +81,32 @@ parts.push(
 parts.push(
   `<text x="96" y="236" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.gray}">76 names, 19 in each race × sex group. Each dot is one name's mean over 24 independent judgments.</text>`
 );
+parts.push(
+  `<text x="96" y="272" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.gray}">Broken axis: gray margins compress 0–0.355 and 0.38–1.0.</text>`
+);
 
 const bandX = xScale(overall);
+parts.push(
+  `<rect x="${xA[0]}" y="${plotTop}" width="${xA[1] - xA[0]}" height="${plotBottom - plotTop}" fill="#e9ecf1"/>`
+);
+parts.push(
+  `<rect x="${xC[0]}" y="${plotTop}" width="${xC[1] - xC[0]}" height="${plotBottom - plotTop}" fill="#e9ecf1"/>`
+);
 parts.push(
   `<rect x="${bandX}" y="${plotTop}" width="${xScale(X_MAX) - bandX}" height="${plotBottom - plotTop}" fill="${COLORS.band}"/>`
 );
 parts.push(
-  `<text x="1465" y="296" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.ink}" text-anchor="end">Above the 76-name average</text>`
+  `<text x="1421" y="296" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="${COLORS.ink}" text-anchor="end">Above the 76-name average</text>`
+);
+parts.push(
+  `<text x="${xA[0]}" y="${plotBottom + 64}" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="${COLORS.gray}" text-anchor="middle">0</text>`
+);
+const barX = xScale(0.5);
+parts.push(
+  `<line x1="${barX}" y1="${plotTop}" x2="${barX}" y2="${plotBottom}" stroke="#9aa2af" stroke-width="2" stroke-dasharray="6 6"/>`
+);
+parts.push(
+  `<text x="1477" y="${plotBottom + 94}" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="${COLORS.gray}" text-anchor="end">interview bar (0.50)</text>`
 );
 
 for (let v = 0.355; v <= 0.3801; v += 0.005) {
@@ -96,8 +122,14 @@ parts.push(
 
 for (let i = 0; i <= 4; i++) {
   const y = plotTop + i * rowH;
-  parts.push(`<line x1="${plotX}" y1="${y}" x2="${xScale(X_MAX)}" y2="${y}" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
+  parts.push(`<line x1="${plotX}" y1="${y}" x2="${xC[1]}" y2="${y}" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
 }
+const breakAt = (x0) => {
+  parts.push(`<line x1="${x0}" y1="${plotBottom + 14}" x2="${x0 + 7}" y2="${plotBottom - 14}" stroke="${COLORS.ink}" stroke-width="2"/>`);
+  parts.push(`<line x1="${x0 + 5}" y1="${plotBottom + 14}" x2="${x0 + 12}" y2="${plotBottom - 14}" stroke="${COLORS.ink}" stroke-width="2"/>`);
+};
+breakAt(450);
+breakAt(1428);
 parts.push(`<line x1="${plotX}" y1="${plotTop}" x2="${plotX}" y2="${plotBottom}" stroke="${COLORS.rule}" stroke-width="1.5"/>`);
 
 const LABEL_LINES = {
@@ -146,7 +178,7 @@ order.forEach((g, i) => {
   );
 
   parts.push(
-    `<text x="1465" y="${rowTop + 52}" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS[g]}" text-anchor="end">${aboveCounts[g]} of 19</text>`
+    `<text x="1421" y="${rowTop + 52}" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="${COLORS[g]}" text-anchor="end">${aboveCounts[g]} of 19</text>`
   );
 });
 
