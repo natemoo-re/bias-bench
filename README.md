@@ -98,6 +98,8 @@ per-resume and per-name report.
 
 All gaps are White − Black; negative = Black-associated names favored.
 
+![Callback gaps across five screeners](results/comparison/callback-gaps.png)
+
 | Model | Evals | W−B mean noul | p | W−B callback | p | M−W mean noul | Distinct noul |
 |---|---|---|---|---|---|---|---|
 | [`jev-1.13.0`](results/jev-1.13.0/) | 1824 | −0.4pp [−0.5, −0.3] | ≈0 | +0.0pp | 1.000 | −0.6pp | 29 |
